@@ -24,13 +24,11 @@ var leftBalance;
 //Calculation Part
 document.getElementById('calculate-btn').addEventListener('click', function () {
 
-
     //Income Part
     incomeMoney = moneyAmount('income-amount');
 
     //total expences
     const totalExpences = moneyAmount('food-amount') + moneyAmount('rent-amount') + moneyAmount('clothes-amount');
-
 
     if (totalExpences < incomeMoney && totalExpences > 0 && incomeMoney > 0) {
         //expence
