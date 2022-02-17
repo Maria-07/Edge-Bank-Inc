@@ -28,12 +28,17 @@
         <section>
             <div class="container">
                 <div class="row justify-content-around my-9 gap-4">
-                    <div class="col-lg-4 col-sm-12 text-center">
-                        <img class="img-fluid" src="./images/money-tree.jpg" alt="money-pic">
+
+                    <!-- image-part  -->
+                    <div class="col-lg-6 col-sm-12 text-center ">
+                        <img class="img-fluid" src="./images/money-1.png" alt="money-pic">
                     </div>
-                    <div class="calculate-part col-lg-4 col-sm-12 text-center p-8">
+
+                    <!-- calculation Part  -->
+                    <div class="calculate-part col-lg-4 col-sm-12 text-center p-5">
 
                         <!-- income Part  -->
+                        <span class="block" id="error"></span>
                         <div class="income">
                             <h2 class="text-3xl font-medium mt-5 mb-4">Income</h2>
                             <div>
@@ -72,15 +77,14 @@
                         <!-- display amount  -->
                         <div class="text-lg font-medium">
                             Total Expences : <span id="total-expences">0.00</span>
-                            <span class="block" id="error"></span>
                         </div>
                         <div class="text-lg font-medium my-4">
                             Balance : <span id="balance-amount">0.00</span>
                         </div>
                         <div class="save text-lg font-medium my-5">
-                            Save: 
-                            <input id="save-amount" class="p-2 w-40 mx-1" type="text"
-                                placeholder="save parcentage">
+                            Save : 
+                            <input id="save-amount" class="p-2 text-center w-40 mx-1" type="text"
+                                placeholder="percentage">
                             %
                             <button id="save-btn"
                                 class="save-btn text-lg font-medium py-2 px-5 mx-2 rounded">save</button>

@@ -2,7 +2,7 @@
 function errorMessage() {
     const error = document.getElementById('error');
     // Changing content and color of content
-    error.textContent = "Please enter a valid number";
+    error.textContent = "*** Please enter a valid number. characters or negative numbers are not acceptable ! ***";
     error.style.color = "red";
 }
 
@@ -22,11 +22,14 @@ var leftBalance;
 
 //Calculation Part
 document.getElementById('calculate-btn').addEventListener('click', function () {
+    
+    
     //Income Part
     const incomeMoney = moneyAmount('income-amount');
 
     //total expences
     const totalExpences = moneyAmount('food-amount') + moneyAmount('rent-amount') + moneyAmount('clothes-amount');
+
 
     if (totalExpences < incomeMoney && totalExpences > 0 && incomeMoney > 0) {
         //expence
@@ -44,14 +47,21 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 //saving part
 document.getElementById('save-btn').addEventListener('click', function () {
+
     const savingMoneyparcent = moneyAmount('save-amount');
-    const savingAmount = leftBalance * (savingMoneyparcent / 100);
 
-    const saveMoney = document.getElementById('save-money');
-    saveMoney.innerText=savingAmount;
+    if (savingMoneyparcent > 0) {
+        const savingAmount = leftBalance * (savingMoneyparcent / 100);
 
-    // console.log(savingAmount);
-    // console.log(leftBalance);
-    const remainingBalance = document.getElementById('remaining-value');
-    remainingBalance.innerText= leftBalance - savingAmount;
+        if (savingAmount > 0) {
+            const saveMoney = document.getElementById('save-money');
+            saveMoney.innerText = savingAmount;
+
+            // console.log(savingAmount);
+            // console.log(leftBalance);
+            const remainingBalance = document.getElementById('remaining-value');
+            remainingBalance.innerText = leftBalance - savingAmount;
+        }
+
+    }
 })
