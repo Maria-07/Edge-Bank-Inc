@@ -31,7 +31,8 @@ body{
     background-color: #a7d3c8;
 }
 
-.calculate-btn{
+.calc-btn,
+.save-btn {
     background-color: #0D7B5E;
     color: #fff;
 }

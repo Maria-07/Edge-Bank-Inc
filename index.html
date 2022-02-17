@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <!-- css link  -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <!-- header part  -->
     <header>
@@ -30,31 +32,41 @@
                         <img src="./images/money-tree.jpg" alt="money-pic">
                     </div>
                     <div class="calculate-part col-lg-4 col-sm-12 text-center p-8">
+
+                        <!-- income Part  -->
                         <div class="income">
                             <h2 class="text-3xl font-medium mt-5 mb-4">Income</h2>
                             <div>
                                 <h4 class="inline-block text-lg font-medium pe-2">Income : </h4>
-                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                                <input id="income-amount" class="p-2" type="text" placeholder="Enter Your Income">
                             </div>
                         </div>
+
+
                         <div class="expenses">
                             <h2 class="text-3xl font-medium mt-5 mb-4">Expenses</h2>
                             <div>
-                                <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Food</span> :</h4>
-                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                                <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Food</span> :
+                                </h4>
+                                <input id="food-amount" class="p-2" type="text" placeholder="Enter Your Income">
                             </div>
                             <div>
                                 <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Rent</span> :
                                 </h4>
-                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                                <input id="rent-amount" class="p-2" type="text" placeholder="Enter Your Income">
                             </div>
                             <div>
                                 <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="">Clothes</span> :
                                 </h4>
-                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                                <input id="clothes-amount" class="p-2" type="text" placeholder="Enter Your Income">
                             </div>
                         </div>
-                        <button class="calculate-btn text-xl font-medium my-8 py-2 px-5 rounded">Calculate</button>
+
+                        <!-- Calculate Button  -->
+                        <button id="calculate-btn"
+                            class="calc-btn text-xl font-medium my-8 py-2 px-5 rounded">Calculate</button>
+
+                        <!-- display amount  -->
                         <div class="text-lg font-medium">
                             Total Expences : <span>0.00</span>
                         </div>
@@ -62,8 +74,9 @@
                             Balance : <span>0.00</span>
                         </div>
                         <div class="save text-lg font-medium my-5">
-                            Save: <span class="text-lg font-medium my-8 py-2 px-5 bg-emerald-100 rounded mx-2">20</span> %
-                            <button class="calculate-btn text-lg font-medium py-2 px-5 mx-2 rounded">save</button>
+                            Save: <span class="text-lg font-medium my-8 py-2 px-5 bg-emerald-100 rounded mx-2">20</span>
+                            %
+                            <button class="save-btn text-lg font-medium py-2 px-5 mx-2 rounded">save</button>
                         </div>
                         <div class="text-lg font-medium">
                             Saving Amount : <span>0.00</span>
@@ -76,5 +89,8 @@
             </div>
         </section>
     </main>
+
+    <script src="./js/calculation.js"></script>
 </body>
+
 </html>
