@@ -18,14 +18,15 @@ function moneyAmount(idname) {
     }
 }
 
+var incomeMoney;
 var leftBalance;
 
 //Calculation Part
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    
-    
+
+
     //Income Part
-    const incomeMoney = moneyAmount('income-amount');
+    incomeMoney = moneyAmount('income-amount');
 
     //total expences
     const totalExpences = moneyAmount('food-amount') + moneyAmount('rent-amount') + moneyAmount('clothes-amount');
@@ -51,17 +52,16 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const savingMoneyparcent = moneyAmount('save-amount');
 
     if (savingMoneyparcent > 0) {
-        const savingAmount = leftBalance * (savingMoneyparcent / 100);
+        const savingAmount = incomeMoney * (savingMoneyparcent / 100);
 
-        if (savingAmount > 0) {
+        if (savingAmount > 0 && savingAmount < leftBalance) {
             const saveMoney = document.getElementById('save-money');
             saveMoney.innerText = savingAmount;
 
-            // console.log(savingAmount);
-            // console.log(leftBalance);
             const remainingBalance = document.getElementById('remaining-value');
             remainingBalance.innerText = leftBalance - savingAmount;
+        }else{
+            errorMessage();
         }
-
     }
 })
