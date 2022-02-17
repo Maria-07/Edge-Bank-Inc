@@ -28,8 +28,8 @@
         <section>
             <div class="container">
                 <div class="row justify-content-around my-9 gap-4">
-                    <div class="col-lg-4 col-sm-12 bg-amber-700 text-center">
-                        <img src="./images/money-tree.jpg" alt="money-pic">
+                    <div class="col-lg-4 col-sm-12 text-center">
+                        <img class="img-fluid" src="./images/money-tree.jpg" alt="money-pic">
                     </div>
                     <div class="calculate-part col-lg-4 col-sm-12 text-center p-8">
 
@@ -49,16 +49,19 @@
                                 <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Food</span> :
                                 </h4>
                                 <input id="food-amount" class="p-2" type="text" placeholder="Enter Your Income">
+                                <span class="block"></span>
                             </div>
                             <div>
                                 <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Rent</span> :
                                 </h4>
                                 <input id="rent-amount" class="p-2" type="text" placeholder="Enter Your Income">
+                                <span class="block"></span>
                             </div>
                             <div>
                                 <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="">Clothes</span> :
                                 </h4>
                                 <input id="clothes-amount" class="p-2" type="text" placeholder="Enter Your Income">
+                                <span class="block"></span>
                             </div>
                         </div>
 
@@ -68,13 +71,15 @@
 
                         <!-- display amount  -->
                         <div class="text-lg font-medium">
-                            Total Expences : <span>0.00</span>
+                            Total Expences : <span id="total-expences">0.00</span>
+                            <span class="block" id="error"></span>
                         </div>
                         <div class="text-lg font-medium my-4">
-                            Balance : <span>0.00</span>
+                            Balance : <span id="balance-amount">0.00</span>
                         </div>
                         <div class="save text-lg font-medium my-5">
-                            Save: <span class="text-lg font-medium my-8 py-2 px-5 bg-emerald-100 rounded mx-2">20</span>
+                            Save: <input id="clothes-amount" class="p-2 w-40 mx-1" type="text"
+                                placeholder="save parcentage">
                             %
                             <button class="save-btn text-lg font-medium py-2 px-5 mx-2 rounded">save</button>
                         </div>
