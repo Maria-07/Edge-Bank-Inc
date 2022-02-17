@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Bank Inc.</title>
+
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- tailwind link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- header part  -->
+    <header>
+        <h1 class="text-5xl font-semibold text-center my-20">Edge<span class="bank-heading"> Bank </span>Inc.</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row justify-content-around my-9 gap-4">
+                    <div class="col-lg-4 col-sm-12 bg-amber-700 text-center">
+                        <img src="./images/money-tree.jpg" alt="money-pic">
+                    </div>
+                    <div class="calculate-part col-lg-4 col-sm-12 text-center p-8">
+                        <div class="income">
+                            <h2 class="text-3xl font-medium mt-5 mb-4">Income</h2>
+                            <div>
+                                <h4 class="inline-block text-lg font-medium pe-2">Income : </h4>
+                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                            </div>
+                        </div>
+                        <div class="expenses">
+                            <h2 class="text-3xl font-medium mt-5 mb-4">Expenses</h2>
+                            <div>
+                                <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Food</span> :</h4>
+                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                            </div>
+                            <div>
+                                <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="ms-4">Rent</span> :
+                                </h4>
+                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                            </div>
+                            <div>
+                                <h4 class="inline-block text-lg font-medium pe-2 my-3"><span class="">Clothes</span> :
+                                </h4>
+                                <input class="p-2" type="text" placeholder="Enter Your Income">
+                            </div>
+                        </div>
+                        <button class="calculate-btn text-xl font-medium my-8 py-2 px-5 rounded">Calculate</button>
+                        <div class="text-lg font-medium">
+                            Total Expences : <span>0.00</span>
+                        </div>
+                        <div class="text-lg font-medium my-4">
+                            Balance : <span>0.00</span>
+                        </div>
+                        <div class="save text-lg font-medium my-5">
+                            Save: <span class="text-lg font-medium my-8 py-2 px-5 bg-emerald-100 rounded mx-2">20</span> %
+                            <button class="calculate-btn text-lg font-medium py-2 px-5 mx-2 rounded">save</button>
+                        </div>
+                        <div class="text-lg font-medium">
+                            Saving Amount : <span>0.00</span>
+                        </div>
+                        <div class="text-lg font-medium my-4">
+                            Remaining Balance : <span>0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
